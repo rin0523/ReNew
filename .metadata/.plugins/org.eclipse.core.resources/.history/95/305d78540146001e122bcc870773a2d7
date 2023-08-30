@@ -1,0 +1,72 @@
+package day09;
+
+public class 과제 {
+
+	public static void main(String[] args) {
+		//클래스 객체 생성(2명)
+		//값을 입력 후 정보출력
+		
+
+	Student kim = new Student();
+	Student lee = new Student();
+		
+	kim.setname("김지수");
+	kim.setage("23");
+	kim.setnumber("010-1234-5678");
+	kim.setaddress("미추홀구");
+	
+	lee.setname("이민준");
+	lee.setage("25");
+	lee.setnumber("010-9876-4321");
+	lee.setaddress("중구");
+	
+	
+	
+		
+		
+	}
+
+}
+
+
+//클래스 생성
+//학생 클래스 생성
+//이름, 나이, 전화번호, 주소
+//출력
+//이름 (나이) 전화번호
+
+class Stduent{
+	
+	
+	
+
+private int Name;
+private int Age;
+private int Number;
+private int Address;
+
+public void print() {
+	System.out.println("("+ Name + ","+Age+ ","+Number+","+Address + ")");
+	
+public int getName() {
+	return Name;
+}
+public void setName(int Name) {
+	this.Name=Name;
+}
+
+public int getAge() {
+	return Age;
+}
+
+public void setAge() {
+	this.Age=Age;
+}
+
+public int getAddress() {
+	return Address
+}
+	
+	
+}
+}
