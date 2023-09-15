@@ -32,7 +32,7 @@ public class ArmyGauge {
 		case 31: 
 			army.event31();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge -20;
 			}else {
 				gauge= gauge+10;
@@ -41,7 +41,7 @@ public class ArmyGauge {
 		case 32: 
 			army.event32();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge +20;
 			}else {
 				gauge= gauge-10;
@@ -49,7 +49,7 @@ public class ArmyGauge {
 		case 33: 
 			army.event33();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge +20;
 			}else {
 				gauge= gauge -30;
@@ -57,7 +57,7 @@ public class ArmyGauge {
 		case 34: 
 			army.event34();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge +30;
 			}else {
 				gauge= gauge-10;
@@ -65,7 +65,7 @@ public class ArmyGauge {
 		case 35: 
 			army.event35();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge +20;
 			}else {
 				gauge= gauge+10;
@@ -73,7 +73,7 @@ public class ArmyGauge {
 		case 36: 
 			army.event36();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge -30;
 			}else {
 				gauge= gauge+10;
@@ -81,7 +81,7 @@ public class ArmyGauge {
 		case 37: 
 			army.event37();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge +20;
 			}else {
 				gauge= gauge-10;
@@ -89,7 +89,7 @@ public class ArmyGauge {
 		case 38: 
 			army.event38();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge +20;
 			}else {
 				gauge= gauge-30;
@@ -97,7 +97,7 @@ public class ArmyGauge {
 		case 39: 
 			army.event39();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge +10;
 			}else {
 				gauge= gauge-30;
@@ -105,7 +105,7 @@ public class ArmyGauge {
 		case 40: 
 			army.event40();
 			king.printSelect(scan);
-			if(king.isContain(random)) {
+			if(king.isContain()) {
 				gauge= gauge +20;
 			}else {
 				gauge= gauge-20;

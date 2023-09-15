@@ -47,12 +47,14 @@ public class King {
 		}
 	}
 	
-	public boolean isContain(int answer) {
-		if(answer==1) {
+	public boolean isContain() {
+		if(select==true) {
 			return true;
 		}else 
 		return false;
 	}
+	
+	
 	
 	
 	
@@ -105,7 +107,7 @@ public class King {
 	public boolean isSelect() {
 		return select;
 	}
-​
+
 public void setSelect(boolean select) {
 		this.select = select;
 	}
