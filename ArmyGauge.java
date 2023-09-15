@@ -12,6 +12,7 @@ public class ArmyGauge {
 	private int random;
 	
 	
+	
 
 	Army army = new Army();
 	King king= new King();
@@ -30,7 +31,7 @@ public class ArmyGauge {
 		
 		case 31: 
 			army.event31();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge -20;
 			}else {
@@ -39,7 +40,7 @@ public class ArmyGauge {
 			
 		case 32: 
 			army.event32();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge +20;
 			}else {
@@ -47,7 +48,7 @@ public class ArmyGauge {
 			}
 		case 33: 
 			army.event33();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge +20;
 			}else {
@@ -55,7 +56,7 @@ public class ArmyGauge {
 			}
 		case 34: 
 			army.event34();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge +30;
 			}else {
@@ -63,7 +64,7 @@ public class ArmyGauge {
 			}
 		case 35: 
 			army.event35();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge +20;
 			}else {
@@ -71,7 +72,7 @@ public class ArmyGauge {
 			}
 		case 36: 
 			army.event36();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge -30;
 			}else {
@@ -79,7 +80,7 @@ public class ArmyGauge {
 			}
 		case 37: 
 			army.event37();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge +20;
 			}else {
@@ -87,7 +88,7 @@ public class ArmyGauge {
 			}
 		case 38: 
 			army.event38();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge +20;
 			}else {
@@ -95,7 +96,7 @@ public class ArmyGauge {
 			}
 		case 39: 
 			army.event39();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge +10;
 			}else {
@@ -103,7 +104,7 @@ public class ArmyGauge {
 			}
 		case 40: 
 			army.event40();
-			king.select(scan);
+			king.printSelect(scan);
 			if(king.isContain(random)) {
 				gauge= gauge +20;
 			}else {
@@ -119,7 +120,7 @@ public class ArmyGauge {
 					System.out.println("====================================");
 					System.out.println(" 침략군이 성문까지 왔습니다!!!");
 					System.out.println(" 우리에게는 이미 저들을 막을 만할 힘이 없습니다!!!! ");
-					System.out.println("end...");
+					System.out.println(" end...");
 					System.out.println("====================================");
 			
 			
@@ -134,6 +135,69 @@ public class ArmyGauge {
 	}
 
 
+			
+
+			public String getGaugeName() {
+				return gaugeName;
+			}
+
+
+
+			public void setGaugeName(String gaugeName) {
+				this.gaugeName = gaugeName;
+			}
+
+
+
+			public int getGauge() {
+				return gauge;
+			}
+
+
+
+			public void setGauge(int gauge) {
+				this.gauge = gauge;
+			}
+
+
+
+			public int getRandom() {
+				return random;
+			}
+
+
+
+			public void setRandom(int random) {
+				this.random = random;
+			}
+
+
+
+			public Army getArmy() {
+				return army;
+			}
+
+
+
+			public void setArmy(Army army) {
+				this.army = army;
+			}
+
+
+
+			public King getKing() {
+				return king;
+			}
+
+
+
+			public void setKing(King king) {
+				this.king = king;
+			}
+
+
+			
+			
 	
 	
 
