@@ -1,5 +1,6 @@
 package JDBC;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class ProductController {
@@ -64,34 +65,42 @@ public class ProductController {
 	}
 
 	private void detail() {
-		// TODO Auto-generated method stub
+		// 상품 상세 정보 select*from product where pno=1;
+		System.out.println("상품번호>");
+		int pno=scan.nextInt();
+		Product p= svc.detail(pno);
+		System.out.println(p);
+		
 
 	}
 
 	private void list() {
-		// TODO Auto-generated method stub
+		// 상품 전체 리스트 select*from product;
+		List<Product> list = svc.list();
+
+		for (Product p : list) {
+			System.out.println(p);
+		}
 
 	}
 
 	private void register() {
-		//상품등록
+		// 상품등록
 		System.out.println("상품명:");
 		scan.nextLine();
 		String name = scan.nextLine();
 		System.out.println("상품가격:");
-		int price=scan.nextInt();
+		int price = scan.nextInt();
 		System.out.println("상품상세내역:");
 		scan.nextLine();
 		String madeby = scan.nextLine();
-		
-		Product p= new Product(name,price,madeby);
-		//svc에게 등록을 요청하는 메서드를 작성 
-		//insert를 하게 되면 리턴되는 값은 몇개의 행이 insert되었는지 값이 리턴 
-		//isOk insert 후 리턴되는 값을 저장 잘되는 1이 리턴, 안되면 0이 리턴 
-		int isOk= svc.register(p);
-		System.out.println("상품등록" + ((isOk>0)? "성공":"실패"));
-		
-		
+
+		Product p = new Product(name, price, madeby);
+		// svc에게 등록을 요청하는 메서드를 작성
+		// insert를 하게 되면 리턴되는 값은 몇개의 행이 insert되었는지 값이 리턴
+		// isOk insert 후 리턴되는 값을 저장 잘되는 1이 리턴, 안되면 0이 리턴
+		int isOk = svc.register(p);
+		System.out.println("상품등록" + ((isOk > 0) ? "성공" : "실패"));
 
 	}
 
