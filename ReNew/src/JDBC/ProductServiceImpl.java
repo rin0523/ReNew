@@ -33,10 +33,6 @@ public class ProductServiceImpl implements Service {
 
 
 
-
-
-
-
 	@Override
 	public Product detail(int pno) {
 		System.out.println("detail_service success!!");
@@ -44,9 +40,22 @@ public class ProductServiceImpl implements Service {
 	}
 
 
-	
+	@Override
+	public int modify(Product p) {
+		// TODO Auto-generated method stub
+		System.out.println("modify_service success!!");
+		return dao.update(p);
+	}
+
+
+	@Override
+	public int remove(int pno) {
+		// TODO Auto-generated method stub
+		System.out.println("remove_service success!!");
+		return dao.delete(pno);
+	}
+
 
 	
-
 	
 }

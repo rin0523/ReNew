@@ -55,22 +55,42 @@ public class ProductController {
 	}
 
 	private void remove() {
-		// TODO Auto-generated method stub
+		// 상품 번호를 받아서 해당 상품을 삭제 
+		System.out.println("삭제상품번호>");
+		int pno=scan.nextInt();
+		
+		int isOk= svc.remove(pno);
+		System.out.println("상품삭제" + ((isOk > 0) ? "성공" : "실패"));
 
 	}
 
 	private void modify() {
-		// TODO Auto-generated method stub
+		//상품번호를 받아서 해당 상품의 내용을 수정 => 번호, 이름, 가격, 설명 수정 
+		//update 구문 사용 
+		System.out.println("수정 상품 번호 > ");
+		int pno=scan.nextInt();
+		System.out.println("상품이룸 : ");
+	    scan.nextLine();
+		String pname= scan.nextLine();
+		System.out.println("상품가격 : ");
+		int price= scan.nextInt();
+		System.out.println("상품상세내역 : ");
+		scan.nextLine();
+		String madeby=scan.nextLine();
+		
+		Product p = new Product(pno, pname, price, madeby);
+		//update 구문 사용 => 리턴은 1 또는 0 
+		int isOk= svc.modify(p);
+		System.out.println("상품 수정 " + (isOk> 0? "성공" : "실패"));
 
 	}
 
 	private void detail() {
 		// 상품 상세 정보 select*from product where pno=1;
 		System.out.println("상품번호>");
-		int pno=scan.nextInt();
-		Product p= svc.detail(pno);
+		int pno = scan.nextInt();
+		Product p = svc.detail(pno);
 		System.out.println(p);
-		
 
 	}
 

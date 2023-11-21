@@ -27,7 +27,7 @@ public class ProductDAOImpl implements DAO {
 
 	// sql 구문 처리
 	// executeWuery() /select 구문에서 사용 ResultSet이 리턴
-	// evecuteUpdate() /inset, update,delete 별도의 리턴이 없고, 0/1로만 리턴
+	// evecuteUpdate() /insert, update,delete 별도의 리턴이 없고, 0/1로만 리턴
 
 	@Override
 	public int insert(Product p) {
@@ -91,6 +91,44 @@ public class ProductDAOImpl implements DAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	@Override
+	public int update(Product p) {
+		// TODO Auto-generated method stub
+		System.out.println("update DAO success!! ");
+		query = "update product set pname = ? , price=?, regdate=now(), madeby=? where pno=? ";
+		try {
+			pst = conn.prepareStatement(query);
+			pst.setString(1, p.getPname());
+			pst.setInt(2, p.getPrice());
+			pst.setString(3, p.getMadeby());
+			pst.setInt(4, p.getPno());
+			// insert,update,delete : executeUpdate();
+			return pst.executeUpdate();
+
+		} catch (SQLException e) {
+			System.out.println("update error");
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	@Override
+	public int delete(int pno) {
+		// TODO Auto-generated method stub
+		System.out.println("delete dao success!! ");
+		query="delete from product where pno=?";
+		try {
+			pst=conn.prepareStatement(query);
+			pst.setInt(1, pno);
+			return pst.executeUpdate();
+			
+		} catch (SQLException e) {
+			System.out.println("delete error");
+			e.printStackTrace();
+		}
+		return 0;
 	}
 
 }
